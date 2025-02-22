@@ -20,6 +20,10 @@
 
  [if문](#if문)
 
+ [배열1](#배열1)
+
+ [배열2](#배열2)
+
  
 <hr/>
 
@@ -417,7 +421,158 @@ else if(조건식2)
 
 > A OR B 비트 연산기호 |를 2번 작성
 
-> ex) number1 < 0 || number2 > 100 
+> ex) number1 < 0 || number2 > 100
+
+<hr/>
+
+# 배열1
++ C언어에서의 배열
+> 자료형 배열명[길이];
++ 배열의 값을 넣는 방법
+> 배열명[인덱스] = 값
+
+> 인덱스의 범위 = 0부터 배열의 길이 -1까지의 범위
++ 배열의 길이를 구하는 방법
+> sizeof(배열명) / sizeof(자료형);
++ 배열의 크기를 구하는 방법
+> sizeof(배열명);
+
+```c
+int main()
+{
+	int iArray[5];
+	iArray[0] = 1; 
+	iArray[1] = 2;
+	iArray[2] = 3;
+	iArray[3] = 4;
+	iArray[4] = 5;
+	printf("배열 iArray가 가지고 있는 요소 \n");
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d ", iArray[i]);
+	}
+	printf("\n");
+	int size = sizeof(iArray);
+	printf("배열의 크기 : %d byte\n", size);
+	int length = sizeof(iArray) / sizeof(int);
+	printf("배열의 길이 : %d\n", length);
+	printf("배열의 이름 : %p\n", iArray);
+
+	return 0;
+}
+```
++ 배열의 특징
+> 배열은 같은 형태의 데이터를 묶어서 따로 관리하는 데이터입니다.
+
+> 각 배열의 요소는 일정한 간격으로 주소를 가지게 됩니다.
+
+> 배열의 첫번째 요소의 주소는 배열의 시작 주소입니다. 배열의 시작 주소는 배열의 이름입니다.
+
+> 배열은 선언과 동시에 데이터를 저장할 연속적인 메모리 저장 공간을 가지게 됩니다.
+
+> 배열은 지정되는 값으로, 주소에 대한 변경을 진행할 수 없습니다.(수정 불가능한 데이터)
+
+<hr/>
+
+# 배열2
++ 2차원 배열
+> 배열의 요소가 배열인 형태를 의미합니다.
+
+> ex) int iarray[] = {1,2,3,4,5};
+
+> ex) int iarray2[][] = { {1,2,3}, {4,5,6}, {7,8,9} }; 2차원 배열
+
++ 주로 for문을 이용해서 배열을 출력을 하게 되는데 그 기준으로 배열 만드는 방법
+
+> 자료형 배열명[세로열][가로열];
+
+ ```c
+int main()
+{
+   int iArray[3][4] =
+   {
+      {1,2,3,4}
+      ,
+      {5,6,7,8}
+      ,
+      {9,10,11,12}
+   };
+
+   for (int i = 0; i < 3; i++)  #세로열 부분에 대한 반복
+   {
+      #세로열 작업을 진행하는 동안 반복시킬 가로열에 대한 반복
+      for (int j = 0; j < 4; j++)
+      {
+         printf("%2d ", iArray2[i][j]);
+      }
+      printf("\n")
+   }
+
+
+   int value[3][3];
+   int value = 1;
+
+   for (int i = 0; i < 3; i++)
+   {
+      for (int j = 0; j < 3; j++)
+      {
+         value2[i][j] = value++;
+      }
+
+   for (int i = 0; i < 3; i++)
+   {
+      for (int j = 0; j < 3; j++)
+   {
+	      printf("%d ", value2[i][j]);
+	  }
+	      printf("\n");
+   }
+
+   #연습 문제
+   # 1 6 7
+   # 2 5 8
+   # 3 4 9
+
+
+   int value3[3][3];
+   value = 1;
+
+   #작업
+   for (int i = 0; i < 3; i++)
+   {
+      #i가 짝수인 경우에는 순서대로 값이 증가
+      if (i % 2 == 0)
+      {
+         for (int j = 0; j < 3; j++)
+         {
+            #1. 현재 값의 증가가 아래로 진행되고 있음. 따라서 i와 j의 대입 순서를 변경
+            value3[j][i] = value++;
+         }
+      }
+      else #i가 홀수인 경우라면 반대로 값이 증가하도록 설정
+      {
+         for (int j = 2; j >= 0; j--)
+         {
+            value[j][i] = value++;
+         }
+      }
+   }
+
+   #출력
+   for (int i = 0; i < 3; i++)
+   {
+      for (int j = 0; j < 3; j++)
+      {
+         printf("%d ", value3[i][j]);
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+```
+
+
 
 
 
