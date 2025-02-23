@@ -1,2 +1,13 @@
-﻿  16.함수3.c
-  Project1.vcxproj -> C:\qwer\Cproject\Project1\x64\Debug\Project1.exe
+﻿  17.함수 연습문제.cpp
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(8,11): error C2065: 'a': 선언되지 않은 식별자입니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(9,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(10,2): error C2059: 구문 오류: 'if'
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(11,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(11,2): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(14,2): error C2059: 구문 오류: 'else'
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(15,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(15,2): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(18,1): error C2059: 구문 오류: '}'
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(18,1): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(22,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\qwer\Cproject\Project1\17.함수 연습문제.cpp(22,1): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
